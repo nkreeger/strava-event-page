@@ -28,12 +28,12 @@ $(function() {
    */
   $.fn.loadResults = function() {
     var segment = $(this).attr("segmentid");
-    var settings = $(".settings");
+    var settings = $(".strava_event_settings");
     var start = 0;
     var startDate = settings.attr("startdate");
     var endDate = settings.attr("enddate");
-    var club = settings.attr("club");
-    var strava_api_loader = settings.attr("strava_api_loader");
+    var club = settings.attr("clubid");
+    var strava_api_loader = settings.attr("strava_api_loader_path");
     var url = strava_api_loader + "?startdate=" + startDate + "&enddate=" + endDate +
               "&club=" + club + "&segment=" + segment + "&start=" + start + "&best=false";
     var element = $(this);
